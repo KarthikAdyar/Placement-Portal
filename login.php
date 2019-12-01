@@ -5,19 +5,19 @@ if(isset($_POST['submit']))
 {
 $email=$_POST['email'];
 $password=$_POST['password'];
-$_SESSION['logged_in'] = FALSE;
+
 
     $result=mysqli_query($conn,"SELECT * FROM login WHERE email='$email' AND  password='$password'");
 	$row=mysqli_num_rows($result);
 	if($row>0)
 	{
 	$_SESSION['email']=$email;
-	$_SESSION['logged_in'] = TRUE;
+	
 	header("location:admin.php");
     exit();
     }
     else{
-		$_SESSION['logged_in'] = FALSE;
+		
         echo "Invalid Email or Password";
     }
 }
