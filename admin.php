@@ -1,19 +1,36 @@
-
+<?php
+session_start();
+include_once('connection.php');
+if (!isset($_SESSION['logged_in'])) {
+	header('Location: login.php');
+	exit();
+}
+session_destroy();
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="assets/images/download.png" type="image/x-icon">
     <title>Document</title>
 
     
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
     
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    <h1 align="center"  style="color:white; text-shadow: 2px 2px 4px #000000;">Admin Panel</h1><br><br>
-</head>
+    <h1 align="center"  style="color:white; text-shadow: 2px 2px 4px #000000;">Admin Panel</h1> 
+    <a class="gradient-button gradient-button-1"  href="login.php" >
+                        Logout
+    </a>
+</head><br><br>
+        
+   
 <style>
 .mycard{
     font-family: 'Roboto';
@@ -38,10 +55,36 @@
   -webkit-box-shadow: 3px 3px 5px 6px #ccc;
   box-shadow:         3px 3px 5px 6px rgb(95, 48, 102);
 }
-
+.gradient-button {
+    margin: 10px;
+    font-family: "Roboto", Gadget, sans-serif;
+    font-size: 15px;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #FFF;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 2px;
+    width: 200px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 25px;
+}
+.gradient-button:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin: 8px 10px 12px;
+}
+.gradient-button-1 {background-image: linear-gradient(to right, #272343 0%, #465881 51%, #272323 100%)}
+.gradient-button-1:hover { background-position: right center; }
 </style>
 
 <body style="background-image:url('background.png');background-size: cover;" >
+
+      
     <div  align="center">
         <div class="row">
             <div class="col-sm-7" style="margin-bottom: 5%;">
@@ -96,7 +139,8 @@
                 </div>
             </div>
         </div>
-    
+    </div>   
+       
 </body>
 
 </html>
