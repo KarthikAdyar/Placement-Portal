@@ -7,6 +7,7 @@
 <html>
 
 <head>
+	<title>View Students</title>
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -33,8 +34,7 @@
 	body{
 	margin:3%;
 	margin-right: 4%;
-	background: -webkit-linear-gradient(bottom, #0EC1F1 0%, #1AE6A8 100%);
-    background: -moz-linear-gradient(bottom,#0EC1F1 0%, #1AE6A8 100%);
+	
     background: -o-linear-gradient(to left, #0EC1F1 0%, #1AE6A8 100%);
 	background: linear-gradient(to left, #0EC1F1 0%, #1AE6A8 100%);
 	}
@@ -58,7 +58,7 @@
 <body>
 	<div class="container ">
 	<a class="btn" href="admin.php" style=" background-blend-mode: lighten;">Admin Page</a>
-		<table align="left" id="dtBasicExample"  class="table table-dark table-striped  table-bordered table-lg" cellspacing="0" ">
+		<table  id="dtBasicExample"  class="table table-dark table-striped  table-bordered table-lg" cellspacing="0" width=100%>
 			<thead>
 				<tr>
 					<th class="th-sm ">FirstName

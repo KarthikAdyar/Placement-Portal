@@ -27,6 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="shortcut icon" href="assets/images/download.png" type="image/x-icon">
     <meta name="description" content="">
 
+    
+
     <title>Home</title>
 
 
@@ -44,6 +46,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
+<script>
+function OnsidewidgetareaClick()
+{
+ var elementObj = document.getElementsByClassName("row1")[0];
+  
+  if (elementObj.style.display == 'block' ||elementObj.style.display=='')
+    {
+        elementObj.style.display = 'none';
+    }
+    else 
+    {
+        elementObj.style.display = 'block';
+    }
+ 
+}
+</script>
 
 
 
@@ -135,13 +153,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                         <div class="media-container-column">
                             <!---Formbuilder Form--->
-                            <form action="main.php" method="POST" class="mbr-form form-with-styler"><input type="hidden" name="email" value="wJx1JJfpqN1tx3E+AiLNGJV5DXCsAfdVmfiJG+IvDv0F0UpxK7Doni7zwO9yxIW0sQxRlctpxePbbwmpruoFs5IWVrMwgu+4rKnAGSoFL5bxoobLooPoX6gFgKSredpC">
+                            <form action="main.php" method="POST" class="mbr-form form-with-styler" >
                                 <h1 class="bg-primary" style="color:white;">Company Enquiry</h1>
-                                <div class="row">
-                                    <div hidden="hidden" class="alert alert-success col-12">Thank you for filling out the form!</div>
-                                    <div hidden="hidden" class="alert alert-danger col-12">
-                                    </div>
-                                </div>
+                                   
+                                </div><br>
                                 <div class="dragArea row">
                                     <div class="col-md-12 form-group ">
                                         <input type="text" name="companyname" placeholder="Company Name" required="required" class="form-control px-3 display-7" id="name-header15-j">
@@ -161,6 +176,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                         <option value="CS">CS</option>
                                                         <option value="ME">ME</option>
                                                         <option value="EC">EC</option>
+                                                        <option value="CV">CV</option>
                                                         <option value="MTech">M.Tech</option>
                                                         <option value="MBA">MBA</option>
                                                         <option value="Other">Other</option>
@@ -175,7 +191,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <textarea name="description" placeholder="Description" class="form-control px-3 display-7" id="message-header15-j"></textarea>
                                 </div>
                                 <div class="col-md-12 input-group-btn">
-                                    <input type="submit" value="submit" class="btn btn-secondary btn-form display-4"></input>
+                                    <input type="submit" value="submit" class="btn btn-secondary btn-form display-4" onclick="OnsidewidgetareaClick();"></input>
+                                </div>
+                                <div style="display:none;" class="row1">
+                                    <div id="hidden" style="background-color:green;color:white;margin-left:16px;"><p><b>Thank you for filling out the form!</b></p></div>
                                 </div>
                         </div>
                         </form>

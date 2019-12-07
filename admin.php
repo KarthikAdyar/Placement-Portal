@@ -3,10 +3,10 @@ session_start();
 include_once('connection.php');
 
 if(!isset($_SESSION['email'])) // If session is not set then redirect to Login Page
-       {
+{
            header("Location:login.php");  
          
-       }
+}
 
 ?>
 <!DOCTYPE html>
@@ -16,10 +16,11 @@ if(!isset($_SESSION['email'])) // If session is not set then redirect to Login P
 <head>
      
     <meta charset="UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="assets/images/download.png" type="image/x-icon">
-    <title>Document</title>
+    <title>Admin</title>
 
     
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -28,7 +29,7 @@ if(!isset($_SESSION['email'])) // If session is not set then redirect to Login P
     
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <h1 align="center"  style="color:white; text-shadow: 2px 2px 4px #000000;">Admin Panel</h1> 
-    <a class="gradient-button gradient-button-1"  href="login.php" >
+    <a class="gradient-button gradient-button-1" href="logout.php" >
                         Logout
     </a>
 </head><br><br>
@@ -143,13 +144,15 @@ if(!isset($_SESSION['email'])) // If session is not set then redirect to Login P
             </div>
         </div>
     </div>   
+    <!--
     <script type="text/javascript">
     function noBack() { window.history.forward(); }
     noBack();
     window.onload = noBack;
     window.onpageshow = function (evt) { if (evt.persisted) noBack(); }
     window.onunload = function () { void (0); }
-    </script>
+    </script> 
+    -->
 </body>
 
 </html>
