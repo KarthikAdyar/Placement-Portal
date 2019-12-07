@@ -2,6 +2,11 @@
 session_start();
 include_once('connection.php');
 
+if(!isset($_SESSION['email'])) // If session is not set then redirect to Login Page
+       {
+           header("Location:login.php");  
+         
+       }
 
 ?>
 <!DOCTYPE html>
@@ -9,6 +14,7 @@ include_once('connection.php');
 
 
 <head>
+     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -137,7 +143,13 @@ include_once('connection.php');
             </div>
         </div>
     </div>   
-       
+    <script type="text/javascript">
+    function noBack() { window.history.forward(); }
+    noBack();
+    window.onload = noBack;
+    window.onpageshow = function (evt) { if (evt.persisted) noBack(); }
+    window.onunload = function () { void (0); }
+    </script>
 </body>
 
 </html>

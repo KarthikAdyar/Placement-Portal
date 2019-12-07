@@ -54,11 +54,15 @@ $password=$_POST['password'];
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/login.css">
 	<link rel="shortcut icon" href="assets/images/download.png" type="image/x-icon">
-    <title>Login Form</title>
+	<title>Login Form</title>
+	
 </head>
 <body>
-    <div class="limiter">
+	<a class="btn btn-primary"href="main.php">HomePage</a>
+	<div class="limiter">
+	
 		<div class="container-login100" style="background-image: url('images/Sahyadri-Campus.jpg');">
+		
 			<div class="wrap-login100 p-t-30 p-b-50">
 				<span class="login100-form-title p-b-41">
 					Account Login
@@ -101,7 +105,7 @@ $password=$_POST['password'];
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
-
+	
    
     
     
